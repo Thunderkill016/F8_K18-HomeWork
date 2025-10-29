@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phòng thí nghiệm</title>
+</head>
+<body>
+<ul>
+    <li><a href="./courses.html">Danh sách khóa học</a></li>
+    <li><a href="./submit.html">Trang gửi form POST</a></li>
+    <li><a href="../index.html">Trang chủ</a></li>
+    <li><a href="./contact.html">Liên hệ – nhúng media</a></li>
+    <li><a href="./about.html">Giới thiệu</a></li>
+</ul>
+<form action="lab.html" method="get">
+    <label for="q">Trường:</label>
+    <input type="text" id="q" name="q" placeholder="Tìm kiếm...">
+    <br>
+        <label>Trình độ:</label>
+        <input type="checkbox" id="beginner" name="level" value="beginner" />
+        <label for="beginner">Beginner</label>
+        <input type="checkbox" id="intermediate" name="level" value="intermediate" />
+        <label for="intermediate">Intermediate</label>
+        <input type="checkbox" id="advanced" name="level" value="advanced" />
+        <label for="advanced">Advanced</label>
+    <br>
+    <label>Hình thức học:</label>
+    <input type="radio" id="online" name="mode" value="online" />
+    <label for="online">Online</label>
+    <input type="radio" id="offline" name="mode" value="offline" />
+    <label for="offline">Offline</label>
+    <br>
+    <label for="category">Danh mục:</label>
+    <select id="category" name="category">
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="devops">DevOps</option>
+    </select>
+    <br>
+    <input type="hidden" name="source" value="lab" />
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+</body>
+</html>
