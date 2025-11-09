@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trung tâm cấu hình giao diện</title>
+    <style>
+        h1 {
+            background-color: darkorange;
+            color: white;
+        }
+
+        #light:checked ~ label[for=light], #light:checked ~ div p.light {
+            background-color: #fafa9e;
+        }
+
+        #light:checked ~ div p.dark {
+            color: #8a8888;
+        }
+
+        #dark:checked ~ label[for=dark], #dark:checked ~ div p.dark {
+            background-color: #333333;
+            color: aliceblue;
+        }
+
+        #dark:checked ~ div p.light {
+            color: #8a8888;
+        }
+
+        /*    Color     */
+        #red:checked ~ label[for=red], #red:checked ~ div p.red {
+            background-color: rgb(227, 129, 129);
+        }
+
+        #red:checked ~ div p.blue, #red:checked ~ div p.green {
+            color: #8a8888;
+        }
+
+        #blue:checked ~ label[for=blue], #blue:checked ~ div p.blue {
+            background-color: rgb(126, 193, 227);
+        }
+
+        #blue:checked ~ div p.red, #blue:checked ~ div p.green {
+            color: #8a8888;
+        }
+
+        #green:checked ~ label[for=green], #green:checked ~ div p.green {
+            background-color: rgb(129, 227, 129);
+        }
+
+        #green:checked ~ div p.red, #green:checked ~ div p.blue {
+            color: #8a8888;
+        }
+
+        /*    Language     */
+        #vi:checked ~ label[for=vi], #vi:checked ~ div p.vi {
+            background-color: #97e16d;
+        }
+        #vi:checked ~ div p.en {
+            color: #8a8888;
+        }
+        #en:checked ~ label[for=en], #en:checked ~ div p.en {
+            background-color: #af6de1;
+        }
+        #en:checked ~ div p.vi {
+            color: #8a8888;
+        }
+    /*    Options    */
+        #showImportantNotices:checked ~ label[for=showImportantNotices], #showImportantNotices:checked ~ div p.alerts {
+            background-color: #fafa9e;
+        }
+        #enableEcoMode:checked ~ label[for=enableEcoMode], #enableEcoMode:checked ~ div p.eco {
+            background-color: #88c37d;
+
+        }
+        #showCriticalAlerts:checked ~ label[for=showCriticalAlerts], #showCriticalAlerts:checked ~ div p.warning {
+            background-color: #3d95e8;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Trung tâm cấu hình giao diện(Demo)</h1>
+<!--Khu dieu khien-->
+<form action="">
+    <div>
+        <p>Chọn giao diện (Theme):</p>
+        <input type="radio" id="light" name="theme">
+        <label for="light">Light </label>
+        <input type="radio" id="dark" name="theme">
+        <label for="dark">Dark</label>
+
+
+        <p>Chọn màu chủ đạo (Color):</p>
+        <input type="radio" id="red" name="color">
+        <label for="red">Red</label>
+        <input type="radio" id="blue" name="color">
+        <label for="blue">Blue</label>
+        <input type="radio" id="green" name="color">
+        <label for="green">Green</label>
+
+
+        <p>Chọn ngôn ngữ (Language):</p>
+        <input type="radio" id="vi" name="language">
+        <label for="vi">VI</label>
+        <input type="radio" id="en" name="language">
+        <label for="en">EN</label>
+
+
+        <p>Tùy chọn bổ sung (Options - Checkbox):</p>
+        <input type="checkbox" id="showImportantNotices" name="option">
+        <label for="showImportantNotices">Hiển thị thông báo quan trọng</label>
+        <input type="checkbox" id="enableEcoMode" name="option">
+        <label for="enableEcoMode">Bật chế độ Eco</label>
+        <input type="checkbox" id="showCriticalAlerts" name="option">
+        <label for="showCriticalAlerts">Hiển thị cảnh báo quan trọng</label>
+        <!--Khu mo ta-->
+        <div>
+            <p class="light">Theme Light: Giao diện sáng, chữ đen</p>
+            <p class="dark">Theme Dark: Giao diện tối chữ sáng</p>
+            <p class="red">Màu red được nhấn mạnh khi chọn Red</p>
+            <p class="blue">Màu blue: được nhấn mạnh khi chọn Blue</p>
+            <p class="green">Màu Green: được nhấn mạnh khi chọn Green</p>
+            <p class="vi">[VI]Xin chào bạn! Khi chọn VI, dòng này rõ hơn</p>
+            <p class="en">[EN]Hello, world! Khi chọn EN, dòng này rõ hơn</p>
+            <p class="alerts">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện</p>
+            <p class="eco">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện</p>
+            <p class="warning">Cảnh báo quan trọng khu vực dùng để nhấn mạnh thông tin hệ thống</p>
+        </div>
+    </div>
+</form>
+</body>
+</html>
