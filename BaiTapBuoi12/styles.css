@@ -188,8 +188,8 @@ label {
 .modal-content-start {
     position: absolute;
     background-color: #fff;
-    width: 25rem;
-    height: 20rem;
+    width: 30rem;
+    height: 24rem;
     padding: 2rem;
     border-radius: 1rem;
     top: 0;
@@ -277,8 +277,8 @@ label {
 }
 
 .modal-content-support {
-    width: 30rem;
-    height: 35rem;
+    width: 35rem;
+    height: 40rem;
     background-color: #fff;
     border-radius: 1rem;
     padding: 2rem;
