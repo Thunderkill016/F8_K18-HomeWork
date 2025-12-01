@@ -599,6 +599,14 @@ ul {
     font-size: 1rem;
     background-color: #fff;
 }
+.btn--sign-in:hover {
+    background-color: rgba(168, 85, 247, 0.1);
+    border-color: #9333ea;
+}
+.btn--sign-up:hover {
+    background-color: #9333ea;
+}
+
 
 .btn--sign-up {
     background-color: #a855f7;
