@@ -510,6 +510,9 @@
     height: 56px;
     border: none;
 }
+.nav-menu-content {
+    display: none;
+}
 
 input[type="checkbox"]:checked ~ .frequently-content-card-header .frequently-content-card-header-open {
     display: none;
