@@ -11,9 +11,9 @@ a = 20
 b = 15
 console.log(a,b)
 
-// const khác let là ko thay đổi được giá trị sau khi khởi tạo giá trị
-// Dùng const khi ko muốn thay đổi giá trị vd như hằng số hoặc id
-// Đoạn code sau sai vì const ko thể thay đổi giá trị sau khi khởi tạo
+// const is different from let because its value cannot be changed after initialization
+// Use const when you do not want to change the value, such as constants or IDs
+// The following code is incorrect because const cannot be reassigned after initialization
 
 // Number
 // Number
@@ -25,16 +25,16 @@ console.log(a,b)
 let student = {
     name: 'Hoang',
     age : 24,
-    scope: [1, 2 , 3]
+    scores: [1, 2 , 3]
 }
 console.log(student)
 
-let d = Number("1000")
-let e = String(1000)
-let f = String(true)
-console.log(d, typeof d)
-console.log(e, typeof e)
-console.log(f ,typeof f)
+let  numericValue = Number("1000")
+let stringStatus = String(1000)
+let isEnabled = String(true)
+console.log(numericValue, typeof numericValue)
+console.log(stringStatus, typeof stringStatus)
+console.log(isEnabled, typeof isEnabled)
 
 // False
 // True
@@ -45,4 +45,4 @@ console.log(f ,typeof f)
 
 const numbers = [4, 3 , 1 , 5, 1]
 console.log(numbers[0], numbers[4])
-// Khi gán a = numbers, cả a và numbers cùng tham chiếu tới một vùng nhớ nên nó sẽ liên quan đến nhau
+// When assigning a = numbers, both a and numbers reference the same memory location, so they are related to each other
