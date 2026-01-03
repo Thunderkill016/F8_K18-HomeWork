@@ -36,7 +36,7 @@ console.log(canEnter)
 
 // Task 4
 // laptop.brand = Apple
-// laptop.brand = 16GB
+// laptop.spec.ram = "16GB"
 // // It affects the original laptop object because both variables reference the same memory location
 
 
