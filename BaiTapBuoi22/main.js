@@ -50,9 +50,10 @@ function daysInMonth(month) {
 console.log(daysInMonth(1))
 
 // Lesson 3
-let n = 21
-const checkEvenOdd = n % 2 === 0 ? 'even' : 'odd'
-console.log(checkEvenOdd)
+function checkEvenOdd(n) {
+    return n % 2 === 0 ? "Even" : "Odd";
+}
+console.log(checkEvenOdd(5))
 
 // Lesson 4
 let age = 13
