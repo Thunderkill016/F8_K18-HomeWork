@@ -2,7 +2,8 @@
  const getTriangleType =  (a, b, c)=> {
      if (typeof a !== "number" || isNaN(a) ||
          typeof b !== "number" || isNaN(b) ||
-         typeof c !== "number" || isNaN(c)) {
+         typeof c !== "number" || isNaN(c) ||
+         a <= 0 || b <= 0 || c <= 0) {
          return "Invalid input";
      }
 
