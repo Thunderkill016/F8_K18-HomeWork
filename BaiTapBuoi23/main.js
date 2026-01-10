@@ -40,11 +40,6 @@ const isPerfectSquare = (a) => {
         return "Not perfect square"
     }
     const squareRoot = a ** 0.5
-    if (squareRoot % 1 === 0) {
-        return "True"
-    }
-    else {
-        return "False"
-    }
+        return squareRoot % 1 === 0
 }
 console.log(isPerfectSquare(25))
