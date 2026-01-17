@@ -34,29 +34,29 @@ function findTopProduct() {
     let result   = null
 
          // 1. Loop through each product in the product list
-    for (let p of products) {
+    for (let product of products) {
         let totalSold = 0
 
         // 2. Find how many times this product appears in all orders
         for (let order of orders) {
             for (let item of order.items) {
-                if (item.productId === p.id) {
+                if (item.productId === product.id) {
                     totalSold += item.quantity
                 }
             }
         }
 
         // 3. Calculate revenue of the current product
-        let revenue = totalSold * p.price
+        let revenue = totalSold * product.price
 
         // 👉 Log revenue of each product
-        console.log(`Product: ${p.name}, Sold: ${totalSold}, Revenue: ${revenue}`)
+        console.log(`Product: ${product.name}, Sold: ${totalSold}, Revenue: ${revenue}`)
 
         // 4. Compare to find the product with the highest revenue
         if (revenue > maxRevenue) {
             maxRevenue = revenue
             result = {
-                product: p,
+                product: product,
                 sold: totalSold,
                 revenue: revenue
             }
