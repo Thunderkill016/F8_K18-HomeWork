@@ -1,4 +1,4 @@
-import {Student} from "./student"
+import { Student } from "./student"
 
 export interface ClassRoomI {
     addStudent: (student: Student) => Student[]
@@ -21,9 +21,7 @@ export class ClassRoom implements ClassRoomI {
     }
 
     removeStudent(student: Student) {
-        this.students = this.students.filter(
-            (students) => students !== student
-        )
+        this.students = this.students.filter(s => s !== student)
         return this.students
     }
 
@@ -32,7 +30,8 @@ export class ClassRoom implements ClassRoomI {
     }
 
     postAnnouncement(message: string) {
-        console.log(`${this.name} có thông báo mới`)
+        console.log(`[Lớp ${this.name}] Thông báo mới:`)
+        console.log(message)
         this.notify(message)
     }
 }
