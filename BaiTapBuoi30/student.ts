@@ -1,27 +1,29 @@
 export interface StudentI {
-    setName(name: string): void;
-    getName(): string;
-    update(message: string): void; // fixed typo
+    setName(name: string): void
+
+    getName(): string
+
+    update(message: string): void
 }
 
 export class Student implements StudentI {
-    private id: number;
-    private name: string;
+    private id: number
+    private name: string
 
     constructor(id: number, name: string) { // fixed constructor
-        this.id = id;
-        this.name = name;
+        this.id = id
+        this.name = name
     }
 
     setName(name: string): void {
-        this.name = name;
+        this.name = name
     }
 
     getName(): string {
-        return this.name;
+        return this.name
     }
 
     update(message: string): void { // fixed typo
-        console.log(`Học sinh ${this.name} nhận được: ${message}`);
+        console.log(`Học sinh ${this.name} nhận được: ${message}`)
     }
 }
