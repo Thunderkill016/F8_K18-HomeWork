@@ -10,7 +10,7 @@ export class Student implements StudentI {
     private id: number
     private name: string
 
-    constructor(id: number, name: string) { // fixed constructor
+    constructor(id: number, name: string) {
         this.id = id
         this.name = name
     }
@@ -23,7 +23,7 @@ export class Student implements StudentI {
         return this.name
     }
 
-    update(message: string): void { // fixed typo
+    update(message: string): void {
         console.log(`Học sinh ${this.name} nhận được: ${message}`)
     }
 }
