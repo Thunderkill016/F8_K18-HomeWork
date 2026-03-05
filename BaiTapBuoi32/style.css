@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+section {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    margin: 6px 0;
+}
+.done-text {
+    text-decoration: line-through;
+}
+.selected {
+    background-color: #93c5fd;
+}
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+.todo-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 6px 0;
+}
+.btn-delete {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.btn-done {
+    background: #facc15;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
