@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết bài post</title>
+  </head>
+  <body>
+    <main>
+      <h1>Chi tiết bài post</h1>
+      <button type="button" id="backBtn">Back</button>
+      <p id="status"></p>
+
+      <section id="postDetail" hidden>
+        <h2 id="postTitle"></h2>
+        <p id="postBody"></p>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const statusElement = document.getElementById("status");
+      const postDetail = document.getElementById("postDetail");
+      const postTitle = document.getElementById("postTitle");
+      const postBody = document.getElementById("postBody");
+      const backBtn = document.getElementById("backBtn");
+
+      function setStatus(message) {
+        statusElement.textContent = message;
+      }
+
+      function goBack() {
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
+
+        window.location.href = "./index.html";
+      }
+
+      async function fetchPostDetail() {
+        const searchParams = new URLSearchParams(window.location.search);
+        const postId = searchParams.get("id");
+
+        if (!postId) {
+          setStatus("Không tìm thấy id bài post.");
+          return;
+        }
+
+        setStatus("Đang tải chi tiết bài post...");
+
+        try {
+          const response = await axios.get(`https://dummyjson.com/posts/${postId}`);
+          const post = response.data;
+
+          postTitle.textContent = post.title;
+          postBody.textContent = post.body;
+
+          postDetail.hidden = false;
+          setStatus("");
+        } catch (error) {
+          setStatus("Không thể tải chi tiết bài post.");
+          console.error(error);
+        }
+      }
+
+      backBtn.addEventListener("click", goBack);
+
+      fetchPostDetail();
+    </script>
+  </body>
+</html>
