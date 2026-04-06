@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập buổi 37 - Storage</title>
+  </head>
+  <body>
+    <main>
+      <h1>Bài tập Storage</h1>
+
+      <section>
+        <h2>Bài 1 - Lưu và đọc tên người dùng</h2>
+        <input type="text" id="nameInput" placeholder="Nhập tên của bạn" />
+        <button type="button" id="saveNameBtn">Lưu</button>
+        <button type="button" id="readNameBtn">Đọc</button>
+        <p id="nameResult"></p>
+      </section>
+
+      <section>
+        <h2>Bài 2 - Đếm số lần truy cập trang</h2>
+        <h1 id="visitCountHeading"></h1>
+        <button type="button" id="resetVisitBtn">Reset</button>
+      </section>
+
+      <section>
+        <h2>Bài 3 - Giỏ hàng tạm thời với SessionStorage</h2>
+
+        <div id="productList">
+          <h3>Sản phẩm</h3>
+        </div>
+
+        <div>
+          <h3>Giỏ hàng</h3>
+          <p id="cartCount"></p>
+          <ul id="cartList"></ul>
+          <button type="button" id="clearCartBtn">Xóa giỏ hàng</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./storage.js"></script>
+  </body>
+</html>
