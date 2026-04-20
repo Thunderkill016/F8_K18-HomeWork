@@ -56,13 +56,35 @@ function App() {
         onClose={() => setIsOpen(false)}
         onSaved={getCustomers}
       />
-      {customers.map((customer: any) => (
-        <p key={customer.id}>
-          {customer.name}
-          <button onClick={() => handleEdit(customer)}>Edit</button>
-          <button onClick={() => handleDelete(customer.id)}>Delete</button>
-        </p>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Rank</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {customers.map((customer: any) => (
+            <tr key={customer.id}>
+              <td>{customer.id}</td>
+              <td>{customer.name}</td>
+              <td>{customer.email}</td>
+              <td>{customer.phone}</td>
+              <td>{customer.address}</td>
+              <td>{customer.rank}</td>
+              <td>
+                <button onClick={() => handleEdit(customer)}>Edit</button>
+                <button onClick={() => handleDelete(customer.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
