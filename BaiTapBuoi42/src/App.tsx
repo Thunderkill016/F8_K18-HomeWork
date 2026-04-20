@@ -61,16 +61,6 @@ export default function App() {
       <Typography variant="h5" sx={{ mb: 2 }}>
         Customer Management
       </Typography>
-      <Button
-        variant="contained"
-        sx={{ mb: 2 }}
-        onClick={() => {
-          setSelectingCustomer(undefined);
-          setIsOpen(true);
-        }}
-      >
-        Add Customer
-      </Button>
       <CustomerTable
         columns={columns}
         rows={customers}
@@ -83,6 +73,16 @@ export default function App() {
         onClose={() => setIsOpen(false)}
         onSaved={getCustomers}
       />
+      <Button
+        variant="contained"
+        sx={{ mt: 2 }}
+        onClick={() => {
+          setSelectingCustomer(undefined);
+          setIsOpen(true);
+        }}
+      >
+        Add Customer
+      </Button>
     </Container>
   );
 }
