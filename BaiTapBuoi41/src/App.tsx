@@ -42,14 +42,6 @@ function App() {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setSelectedCustomer(null);
-          setIsOpen(true);
-        }}
-      >
-        Add Customer
-      </button>
       <CustomerDialog
         isOpen={isOpen}
         customer={selectedCustomer}
@@ -85,6 +77,14 @@ function App() {
           ))}
         </tbody>
       </table>
+      <button
+        onClick={() => {
+          setSelectedCustomer(null);
+          setIsOpen(true);
+        }}
+      >
+        Add Customer
+      </button>
     </div>
   );
 }
