@@ -25,6 +25,7 @@ const ProductPage = () => {
   };
 
   const handleDelete = async (id: number) => {
+    if (!window.confirm("Are you sure you want to delete this product?")) return;
     await api.delete(`/products/${id}`);
     getProducts();
   };
