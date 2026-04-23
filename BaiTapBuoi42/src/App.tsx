@@ -48,6 +48,7 @@ export default function App() {
   };
 
   const handleDelete = async (id: number) => {
+    if (!window.confirm("Are you sure you want to delete this customer?")) return;
     await api.delete(`/customers/${id}`);
     getCustomers();
   };
