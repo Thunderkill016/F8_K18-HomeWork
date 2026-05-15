@@ -153,36 +153,6 @@ button {
   background: #1e293b;
 }
 
-.references {
-  margin-top: 34px;
-  padding-top: 22px;
-  border-top: 1px solid;
-}
-
-.book-content.light .references {
-  border-color: #d8e2f1;
-}
-
-.book-content.dark .references {
-  border-color: #334155;
-}
-
-.references h3 {
-  margin: 0 0 12px;
-  font-size: 1rem;
-}
-
-.references ul {
-  margin: 0;
-  padding-left: 22px;
-}
-
-.references li {
-  margin-bottom: 8px;
-  font-size: 0.98rem;
-  line-height: 1.6;
-}
-
 .site-footer {
   padding: 22px 28px;
   border-top: 1px solid;
