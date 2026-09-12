@@ -1,0 +1,16 @@
+{
+  "name": "js-rebuild-lab",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "index:old": "node scripts/build-old-work-index.mjs",
+    "sync:upstreams": "node scripts/sync-upstreams.mjs",
+    "dev": "npm run index:old && vite",
+    "build": "npm run index:old && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5"
+  }
+}
